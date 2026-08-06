@@ -47,7 +47,7 @@ It:
 
 ---
 
-## 🏗️ Tech Stack
+##  Tech Stack
 
 ### Backend
 
@@ -210,6 +210,6 @@ The generated Google Sheet contains:
 
 ---
 
-## 📜 License
+##  License
 
 This project was developed as part of a Buildathon and is intended for educational and demonstration purposes.
