@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Funding Agent</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚀 Funding Companies Scraper Agent</h1>
+
+<p>
+Scrapes weekly funded startups from Entrackr & Inc42,
+extracts funding information using Gemini,
+and updates Google Sheets.
+</p>
+
+<button onclick="runPipeline()">
+Run Weekly Scraper
+</button>
+
+<br><br>
+
+<a href="{{ sheet_url }}" target="_blank">
+📄 Open Google Sheet
+</a>
+
+<div id="status"></div>
+
+</div>
+
+<script>
+
+async function runPipeline(){
+
+document.getElementById("status").innerHTML="Running...";
+
+const res=await fetch("/run",{
+method:"POST"
+});
+
+const data=await res.json();
+
+document.getElementById("status").innerHTML=data.message;
+
+}
+
+</script>
+
+</body>
+
+</html>
